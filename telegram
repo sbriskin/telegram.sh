@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="0.3"
+VERSION="0.3.1"
 TOKEN=""
 CHATS=()
 DEBUG=false
@@ -252,6 +252,7 @@ log "CHATS is now ${CHATS[*]}"
 log "Importing config file(s)..."
 
 [ -r /etc/telegram.sh.conf ] && source /etc/telegram.sh.conf
+[ -r ~/.config/telegram.sh/telegram.sh.conf ] && source ~/.config/telegram.sh/telegram.sh.conf
 [ -r ~/.telegram.sh ] && source ~/.telegram.sh
 
 [ -z "$TOKEN" ] && TOKEN=$TELEGRAM_TOKEN
